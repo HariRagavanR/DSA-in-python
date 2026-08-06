@@ -1,0 +1,593 @@
+
+# CHAPTER 1.2 – Traversal Pattern (Level 2)
+
+## 1. Find First Occurrence
+
+### Concept
+
+Find the **first index** where the target element appears in the array.
+
+### Recognition Keywords
+
+* First
+* Occurrence
+* Index
+* Search
+* Position
+
+### Python Template
+
+```python
+def first_occurrence(arr, target):
+
+    for i in range(len(arr)):
+
+        if arr[i] == target:
+            return i
+
+    return -1
+```
+
+### Template Explanation
+
+```python
+for i in range(len(arr)):
+```
+
+* Traverse the array from left to right.
+* `i` represents the current index.
+
+```python
+if arr[i] == target:
+```
+
+* Compare the current element with the target.
+
+```python
+return i
+```
+
+* Return immediately because the first occurrence is found.
+
+```python
+return -1
+```
+
+* If the loop completes, the target is not present.
+
+### Pattern Formula
+
+Traversal
+↓
+Compare
+↓
+First Match
+↓
+Return
+
+### Time Complexity
+
+**O(n)**
+
+### Space Complexity
+
+**O(1)**
+
+---
+
+# 2. Find Last Occurrence
+
+### Concept
+
+Find the **last index** where the target appears.
+
+### Recognition Keywords
+
+* Last
+* Occurrence
+* Last Index
+
+### Python Template
+
+```python
+def last_occurrence(arr, target):
+
+    last = -1
+
+    for i in range(len(arr)):
+
+        if arr[i] == target:
+            last = i
+
+    return last
+```
+
+### Template Explanation
+
+```python
+last = -1
+```
+
+* Assume the element is not found.
+
+```python
+last = i
+```
+
+* Whenever the target is found, update the index.
+
+* Continue traversing until the end.
+
+* The last updated value is the answer.
+
+### Pattern Formula
+
+Traversal
+↓
+Compare
+↓
+Update Answer
+↓
+Return After Loop
+
+### Time Complexity
+
+**O(n)**
+
+### Space Complexity
+
+**O(1)**
+
+---
+
+# 3. Count Positive Numbers
+
+### Concept
+
+Count all numbers greater than zero.
+
+### Recognition Keywords
+
+* Count
+* Positive
+* Greater Than Zero
+
+### Python Template
+
+```python
+def count_positive(arr):
+
+    count = 0
+
+    for num in arr:
+
+        if num > 0:
+            count += 1
+
+    return count
+```
+
+### Template Explanation
+
+```python
+count = 0
+```
+
+* Stores the number of positive elements.
+
+```python
+if num > 0:
+```
+
+* Checks whether the current number is positive.
+
+```python
+count += 1
+```
+
+* Increase the count by one.
+
+### Pattern Formula
+
+Traversal
+↓
+Condition (`num > 0`)
+↓
+Count++
+
+### Time Complexity
+
+**O(n)**
+
+### Space Complexity
+
+**O(1)**
+
+---
+
+# 4. Count Negative Numbers
+
+### Concept
+
+Count all numbers less than zero.
+
+### Recognition Keywords
+
+* Count
+* Negative
+* Less Than Zero
+
+### Python Template
+
+```python
+def count_negative(arr):
+
+    count = 0
+
+    for num in arr:
+
+        if num < 0:
+            count += 1
+
+    return count
+```
+
+### Pattern Formula
+
+Traversal
+↓
+Condition (`num < 0`)
+↓
+Count++
+
+### Time Complexity
+
+**O(n)**
+
+### Space Complexity
+
+**O(1)**
+
+---
+
+# 5. Count Zeroes
+
+### Concept
+
+Count the total number of zeroes.
+
+### Recognition Keywords
+
+* Count
+* Zero
+* Frequency
+
+### Python Template
+
+```python
+def count_zeroes(arr):
+
+    count = 0
+
+    for num in arr:
+
+        if num == 0:
+            count += 1
+
+    return count
+```
+
+### Pattern Formula
+
+Traversal
+↓
+Condition (`num == 0`)
+↓
+Count++
+
+### Time Complexity
+
+**O(n)**
+
+### Space Complexity
+
+**O(1)**
+
+---
+
+# 6. Find Largest Even Number
+
+### Concept
+
+Find the largest even number in the array.
+
+### Recognition Keywords
+
+* Largest
+* Maximum
+* Even
+
+### Python Template
+
+```python
+def largest_even(arr):
+
+    largest = None
+
+    for num in arr:
+
+        if num % 2 == 0:
+
+            if largest is None or num > largest:
+                largest = num
+
+    return largest
+```
+
+### Template Explanation
+
+```python
+num % 2 == 0
+```
+
+* Check whether the number is even.
+
+```python
+num > largest
+```
+
+* Update only if the current even number is larger.
+
+### Pattern Formula
+
+Traversal
+↓
+Check Even
+↓
+Compare Maximum
+↓
+Update
+
+### Time Complexity
+
+**O(n)**
+
+### Space Complexity
+
+**O(1)**
+
+---
+
+# 7. Find Smallest Odd Number
+
+### Concept
+
+Find the smallest odd number in the array.
+
+### Recognition Keywords
+
+* Smallest
+* Minimum
+* Odd
+
+### Python Template
+
+```python
+def smallest_odd(arr):
+
+    smallest = None
+
+    for num in arr:
+
+        if num % 2 != 0:
+
+            if smallest is None or num < smallest:
+                smallest = num
+
+    return smallest
+```
+
+### Pattern Formula
+
+Traversal
+↓
+Check Odd
+↓
+Compare Minimum
+↓
+Update
+
+### Time Complexity
+
+**O(n)**
+
+### Space Complexity
+
+**O(1)**
+
+---
+
+# 8. Reverse Print
+
+### Concept
+
+Print all elements from the last index to the first index.
+
+### Recognition Keywords
+
+* Reverse
+* Backward
+* Print
+
+### Python Template
+
+```python
+def reverse_print(arr):
+
+    for i in range(len(arr)-1, -1, -1):
+
+        print(arr[i])
+```
+
+### Template Explanation
+
+```python
+range(len(arr)-1, -1, -1)
+```
+
+* Start from the last index.
+* Move one step backward each time.
+* Stop before index `-1`.
+
+### Pattern Formula
+
+Start from End
+↓
+Print
+↓
+Move Left
+
+### Time Complexity
+
+**O(n)**
+
+### Space Complexity
+
+**O(1)**
+
+---
+
+# 9. Replace Element
+
+### Concept
+
+Replace all occurrences of one value with another.
+
+### Recognition Keywords
+
+* Replace
+* Update
+* Modify
+
+### Python Template
+
+```python
+def replace_element(arr, old, new):
+
+    for i in range(len(arr)):
+
+        if arr[i] == old:
+
+            arr[i] = new
+
+    return arr
+```
+
+### Template Explanation
+
+* We use the **index** because we are modifying the original array.
+* If we use `for num in arr`, changing `num` won't change the array.
+
+### Pattern Formula
+
+Traversal
+↓
+Compare
+↓
+Replace
+
+### Time Complexity
+
+**O(n)**
+
+### Space Complexity
+
+**O(1)**
+
+---
+
+# 10. Move Zeroes (Beginner Method)
+
+### Concept
+
+Move all zeroes to the end while maintaining the order of non-zero elements.
+
+### Recognition Keywords
+
+* Move
+* Shift
+* Rearrange
+* Zeroes
+
+### Python Template
+
+```python
+def move_zeroes(arr):
+
+    result = []
+
+    for num in arr:
+
+        if num != 0:
+
+            result.append(num)
+
+    while len(result) < len(arr):
+
+        result.append(0)
+
+    return result
+```
+
+### Template Explanation
+
+* Create a new list.
+* Store all non-zero elements.
+* Fill the remaining positions with zeroes.
+
+### Pattern Formula
+
+Traversal
+↓
+Store Non-Zero Elements
+↓
+Append Zeroes
+
+### Time Complexity
+
+**O(n)**
+
+### Space Complexity
+
+**O(n)**
+
+---
+
+## 📝 Level 2 Revision (Remember This)
+
+Almost every Traversal question follows this structure:
+
+```python
+for element/index in array:
+
+    if condition:
+
+        perform action
+```
+
+Only **two things change** from one problem to another:
+
+1. **Condition** (What should I check?)
+
+   * `num > 0`
+   * `num == target`
+   * `num % 2 == 0`
+   * `arr[i] == old`
+
+2. **Action** (What should I do?)
+
+   * Count
+   * Return
+   * Update Maximum
+   * Update Minimum
+   * Replace Value

@@ -1,0 +1,49 @@
+Traversal Medium Problems - Quick Revision
+
+1.  Best Time to Buy and Sell Stock Pattern : Traversal + Track Minimum
+    Logic : Track Minimum → Calculate Profit → Update Maximum TC : O(n)
+    SC : O(1)
+
+2.  Product of Array Except Self Pattern : Prefix Product + Suffix
+    Product Logic : Left Product × Right Product TC : O(n) SC : O(1)
+    (excluding output)
+
+3.  Majority Element Pattern : HashMap → Moore’s Voting Logic : Same →
+    Vote++ | Different → Vote– | Vote=0 → New Candidate TC : O(n) SC :
+    O(1) (Moore)
+
+4.  Maximum Consecutive Ones Pattern : Traversal + Count Tracking Logic
+    : 1 → Count++ → Update Max | 0 → Reset Count TC : O(n) SC : O(1)
+
+5.  Pivot Index Pattern : Traversal + Running Sum Logic : Right =
+    Total - Left - Current TC : O(n) SC : O(1)
+
+6.  Find All Duplicates Pattern : Traversal + HashSet Logic : Seen? Yes
+    → Duplicate | No → Store TC : O(n) SC : O(n)
+
+7.  Find Missing and Repeating Number Pattern : Traversal + HashMap
+    Logic : Frequency 0 → Missing | Frequency 2 → Repeating TC : O(n) SC
+    : O(n)
+
+8.  Maximum Difference Pattern : Traversal + Track Minimum Logic :
+    Current - Minimum → Update Answer → Update Minimum TC : O(n) SC :
+    O(1)
+
+9.  Longest Mountain Pattern : Traversal + Peak Detection Logic :
+    Increase → Peak → Decrease → Update Length TC : O(n) SC : O(1)
+
+10. Maximum Product Subarray Pattern : Track Maximum + Minimum Product
+    Logic : Negative? Swap Max & Min → Update Both → Update Answer TC :
+    O(n) SC : O(1)
+
+==================================================
+
+Traversal Patterns Learned
+
+• Track Minimum • Track Maximum • Count Tracking • Frequency Counting •
+Seen Elements • Running Sum • Prefix Product • Peak Detection • Max &
+Min Tracking
+
+Interview Flow
+
+Brute Force ↓ Better ↓ Optimal ↓ Recognize Pattern

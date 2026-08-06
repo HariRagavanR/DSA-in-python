@@ -1,0 +1,528 @@
+# CHAPTER 1.3 – Traversal Pattern (Level 3)
+
+## 1. Second Largest Element
+
+### Concept
+
+Find the **second biggest** element in the array.
+
+### Recognition Keywords
+
+* Second Largest
+* Runner Up
+* Second Maximum
+
+### Core Idea
+
+Maximum mattum store panninaa podhathu.
+
+**Two variables maintain pannanum.**
+
+```
+largest
+
+second_largest
+```
+
+Whenever a new maximum is found,
+
+Old maximum becomes
+
+↓
+
+Second maximum.
+
+### Python Template
+
+```python
+def second_largest(arr):
+
+    largest = float('-inf')
+    second = float('-inf')
+
+    for num in arr:
+
+        if num > largest:
+
+            second = largest
+            largest = num
+
+        elif num > second and num != largest:
+
+            second = num
+
+    return second
+```
+
+### Pattern Formula
+
+Traversal
+
+↓
+
+Compare Maximum
+
+↓
+
+Update Largest
+
+↓
+
+Update Second Largest
+
+---
+
+## 2. Second Smallest Element
+
+### Concept
+
+Find the second minimum element.
+
+### Recognition Keywords
+
+* Second Smallest
+* Runner Up Minimum
+
+### Python Template
+
+```python
+def second_smallest(arr):
+
+    smallest = float('inf')
+    second = float('inf')
+
+    for num in arr:
+
+        if num < smallest:
+
+            second = smallest
+            smallest = num
+
+        elif num < second and num != smallest:
+
+            second = num
+
+    return second
+```
+
+### Pattern Formula
+
+Traversal
+
+↓
+
+Compare Minimum
+
+↓
+
+Update Smallest
+
+↓
+
+Update Second Smallest
+
+---
+
+## 3. Maximum Difference
+
+### Concept
+
+Find the maximum difference between two elements.
+
+Usually
+
+```
+Maximum - Minimum
+```
+
+### Recognition Keywords
+
+* Difference
+* Maximum Difference
+
+### Python Template
+
+```python
+def maximum_difference(arr):
+
+    maximum = max(arr)
+    minimum = min(arr)
+
+    return maximum - minimum
+```
+
+### Interview Logic
+
+Later companies may ask
+
+```
+Difference where larger element comes after smaller element.
+```
+
+That version is harder.
+
+For now,
+
+learn the simple version.
+
+---
+
+## 4. Find Missing Number (Simple)
+
+### Concept
+
+Numbers from
+
+```
+1 to N
+```
+
+One number is missing.
+
+Find it.
+
+### Recognition Keywords
+
+* Missing
+* Missing Number
+
+### Python Template
+
+```python
+def missing_number(arr, n):
+
+    expected = n * (n + 1) // 2
+
+    actual = sum(arr)
+
+    return expected - actual
+```
+
+### Pattern Formula
+
+Expected Sum
+
+↓
+
+Actual Sum
+
+↓
+
+Subtract
+
+---
+
+## 5. Remove Duplicates (Basic)
+
+### Concept
+
+Keep only unique elements.
+
+### Recognition Keywords
+
+* Duplicate
+* Unique
+* Remove
+
+### Python Template
+
+```python
+def remove_duplicates(arr):
+
+    result = []
+
+    for num in arr:
+
+        if num not in result:
+
+            result.append(num)
+
+    return result
+```
+
+### Note
+
+This is
+
+```
+O(n²)
+```
+
+Later HashMap chapter-la
+
+```
+O(n)
+```
+
+solution learn pannuvom.
+
+---
+
+## 6. Maximum Consecutive Ones
+
+### Concept
+
+Find the longest sequence of continuous
+
+```
+1 1 1 1
+```
+
+### Recognition Keywords
+
+* Consecutive
+* Continuous
+* Maximum Ones
+
+### Python Template
+
+```python
+def max_consecutive_ones(arr):
+
+    count = 0
+    maximum = 0
+
+    for num in arr:
+
+        if num == 1:
+
+            count += 1
+            maximum = max(maximum, count)
+
+        else:
+
+            count = 0
+
+    return maximum
+```
+
+### Pattern Formula
+
+Traversal
+
+↓
+
+Condition
+
+↓
+
+Increase Count
+
+↓
+
+Reset Count
+
+↓
+
+Update Maximum
+
+---
+
+## 7. Majority Element (Brute Force)
+
+### Concept
+
+Find the element appearing more than
+
+```
+n/2
+```
+
+times.
+
+### Recognition Keywords
+
+* Majority
+* Most Frequent
+
+### Python Template
+
+```python
+def majority_element(arr):
+
+    for num in arr:
+
+        count = 0
+
+        for value in arr:
+
+            if value == num:
+
+                count += 1
+
+        if count > len(arr) // 2:
+
+            return num
+```
+
+### Note
+
+Nested Loop
+
+↓
+
+O(n²)
+
+Later
+
+HashMap
+
+↓
+
+O(n)
+
+---
+
+## 8. Product of Array
+
+### Concept
+
+Multiply every element.
+
+### Recognition Keywords
+
+* Product
+* Multiply
+
+### Python Template
+
+```python
+def product_array(arr):
+
+    product = 1
+
+    for num in arr:
+
+        product *= num
+
+    return product
+```
+
+---
+
+## 9. Find Pivot Index (Basic)
+
+### Concept
+
+Find index where
+
+```
+Left Sum
+
+=
+
+Right Sum
+```
+
+### Recognition Keywords
+
+* Pivot
+* Left Sum
+* Right Sum
+
+### Beginner Template
+
+```python
+def pivot_index(arr):
+
+    for i in range(len(arr)):
+
+        left = sum(arr[:i])
+
+        right = sum(arr[i+1:])
+
+        if left == right:
+
+            return i
+
+    return -1
+```
+
+### Note
+
+Current Complexity
+
+```
+O(n²)
+```
+
+Later
+
+Prefix Sum
+
+↓
+
+O(n)
+
+---
+
+## 10. Best Time to Buy and Sell Stock (Traversal)
+
+### Concept
+
+Buy once.
+
+Sell once.
+
+Maximum Profit.
+
+### Recognition Keywords
+
+* Profit
+* Buy
+* Sell
+* Stock
+
+### Python Template
+
+```python
+def max_profit(prices):
+
+    minimum = float('inf')
+
+    profit = 0
+
+    for price in prices:
+
+        minimum = min(minimum, price)
+
+        profit = max(profit, price - minimum)
+
+    return profit
+```
+
+### Pattern Formula
+
+Traversal
+
+↓
+
+Track Minimum Price
+
+↓
+
+Calculate Profit
+
+↓
+
+Update Maximum Profit
+
+---
+
+# 🎯 Level 3 Summary
+
+| Problem                       | Main Idea                        |
+| ----------------------------- | -------------------------------- |
+| Second Largest                | Track Largest & Second Largest   |
+| Second Smallest               | Track Smallest & Second Smallest |
+| Maximum Difference            | Maximum - Minimum                |
+| Missing Number                | Expected Sum - Actual Sum        |
+| Remove Duplicates             | Check Before Insert              |
+| Maximum Consecutive Ones      | Count + Reset                    |
+| Majority Element              | Count Frequency (Brute Force)    |
+| Product of Array              | Multiply Every Element           |
+| Pivot Index                   | Left Sum == Right Sum            |
+| Best Time to Buy & Sell Stock | Minimum Price + Maximum Profit   |
+
+---
+

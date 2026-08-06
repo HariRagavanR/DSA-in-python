@@ -1,0 +1,19 @@
+1. Best Time to Buy and Sell Stock
+
+2. Product of Array Except Self
+
+3. Majority Element (Optimized)
+
+4. Maximum Consecutive Ones II
+
+5. Pivot Index (Optimized)
+
+6. Find All Duplicates
+
+7. Find Missing and Repeating Number
+
+8. Maximum Difference (Optimized)
+
+9. Longest Mountain (Traversal Logic)
+
+10. Maximum Product Subarray (Introduction)
