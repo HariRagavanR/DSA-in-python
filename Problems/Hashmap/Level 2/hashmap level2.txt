@@ -1,0 +1,49 @@
+📘 HashMap - Level 2 (Most Asked Interview Questions)
+
+Goal: Learn the HashMap patterns that appear repeatedly in MNC coding rounds.
+
+🏆 Level 2 Roadmap
+
+Instead of learning 50 random problems, we'll master these 6 interview patterns.
+
+1. Two Sum ⭐⭐⭐⭐⭐
+   Pattern : Pair Finding
+
+2. Valid Anagram ⭐⭐⭐⭐⭐
+   Pattern : Frequency Comparison
+
+3. Majority Element ⭐⭐⭐⭐⭐
+   Pattern : Frequency / Voting
+
+4. First Non-Repeating Character ⭐⭐⭐⭐
+   Pattern : Frequency + Second Traversal
+
+5. Ransom Note ⭐⭐⭐⭐
+   Pattern : Character Consumption
+
+6. Isomorphic Strings ⭐⭐⭐⭐
+   Pattern : Character Mapping
+🎯 Why These 6?
+
+Because almost every HashMap interview question is a variation of these.
+
+Frequency Pattern
+│
+├── Valid Anagram
+├── Majority Element
+├── Ransom Note
+└── First Non-Repeating Character
+
+Seen Before Pattern
+│
+├── Contains Duplicate
+├── Happy Number
+└── Longest Consecutive Sequence
+
+Pair Pattern
+│
+└── Two Sum ⭐⭐⭐⭐⭐
+
+Mapping Pattern
+│
+└── Isomorphic Strings

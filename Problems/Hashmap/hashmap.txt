@@ -1,0 +1,188 @@
+
+# 📘 HashMap Definition
+
+**HashMap** is a data structure that stores data in **Key → Value** pairs.
+
+```text
+HashMap = Key → Value
+```
+
+Python-la HashMap-na:
+
+```text
+Dictionary (dict)
+```
+
+Simple definition (Interview):
+
+> **"A HashMap stores data as Key-Value pairs and provides fast insertion, lookup, update, and deletion, usually in O(1) average time."**
+
+**Interview keywords:**
+
+```text
+Key → Value
+
+Fast Lookup
+
+Fast Insert
+
+Fast Update
+
+Fast Delete
+
+Average Time : O(1)
+```
+
+---
+
+# 🎯 HashMap Interview Patterns
+
+Interview-la HashMap problems mostly indha **7 patterns**-la dhaan varum.
+
+```text
+1. Frequency Counting ⭐⭐⭐⭐⭐
+
+2. Seen Before / Duplicate ⭐⭐⭐⭐⭐
+
+3. Pair Finding ⭐⭐⭐⭐⭐
+
+4. Character Mapping ⭐⭐⭐⭐
+
+5. Grouping ⭐⭐⭐⭐
+
+6. Prefix Sum + HashMap ⭐⭐⭐⭐
+
+7. Design Problems ⭐⭐⭐
+```
+
+---
+
+# 🚀 Namma Learn Panna Poradhu (Only Interview Focus)
+
+## ⭐ Level 1 – Foundation (Must)
+
+```text
+1. Frequency of Elements
+
+2. Count Characters
+
+3. Contains Duplicate
+
+4. Find Unique Element
+
+5. First Repeating Element
+
+6. Count Distinct Elements
+```
+
+👉 Purpose:
+
+Dictionary use panna comfortable aaganum.
+
+---
+
+## ⭐ Level 2 – Most Asked
+
+```text
+1. Two Sum ⭐⭐⭐⭐⭐
+
+2. Valid Anagram ⭐⭐⭐⭐⭐
+
+3. Majority Element ⭐⭐⭐⭐⭐
+
+4. First Non-Repeating Character ⭐⭐⭐⭐
+
+5. Ransom Note ⭐⭐⭐
+
+6. Isomorphic Strings ⭐⭐⭐
+```
+
+👉 **Two Sum** almost every beginner interview-la famous.
+
+---
+
+## ⭐ Level 3 – Medium
+
+```text
+1. Group Anagrams ⭐⭐⭐⭐⭐
+
+2. Top K Frequent Elements ⭐⭐⭐⭐
+
+3. Longest Consecutive Sequence ⭐⭐⭐⭐
+
+4. Subarray Sum Equals K ⭐⭐⭐⭐
+```
+
+---
+
+# 🎯 Final Interview List
+
+If namma **indha 14 problems** master pannom na,
+
+```text
+Frequency of Elements
+
+Count Characters
+
+Contains Duplicate
+
+Find Unique Element
+
+First Repeating Element
+
+Count Distinct Elements
+
+Two Sum ⭐
+
+Valid Anagram ⭐
+
+Majority Element ⭐
+
+First Non-Repeating Character
+
+Ransom Note
+
+Isomorphic Strings
+
+Group Anagrams ⭐
+
+Top K Frequent Elements
+```
+
+Nee **90% HashMap-based coding rounds**-la comfortable-ah iruppa.
+
+---
+
+# 📅 Namma Plan (Interview First)
+
+```text
+Week 1
+-------
+✅ HashMap
+
+Week 2
+-------
+✅ Two Pointers
+
+Week 3
+-------
+✅ Sliding Window
+
+Week 4
+-------
+✅ Binary Search
+
+Parallel
+--------
+✅ Aptitude
+
+✅ Communication
+
+✅ Resume
+
+✅ Mock Interviews
+
+✅ Job Applications
+```
+
+---
