@@ -1,0 +1,17 @@
+1️⃣ HashMap + Set
+   └── Longest Consecutive Sequence
+
+2️⃣ HashMap + Prefix Sum
+   ├── Subarray Sum Equals K
+   ├── Continuous Subarray Sum
+   └── Contiguous Array
+
+3️⃣ HashMap + Sliding Window
+   ├── Find All Anagrams
+   └── Longest Substring Without Repeating
+
+4️⃣ HashMap + Frequency
+   ├── Find All Duplicates
+   ├── Top K Frequent
+   ├── Group Anagrams
+   └── Number of Good Pairs
