@@ -1,0 +1,35 @@
+1. Traversal          ✅
+2. HashMap            🟡
+3. Two Pointers       ⬜
+4. Sliding Window     🟡
+5. Prefix Sum         ⬜
+6. Binary Search      ⬜
+7. Stack              ⬜
+8. Linked List        ⬜
+9. Recursion          ⬜
+10. Trees             ⬜
+11. Heap              🟡
+12. Greedy            ⬜
+13. Backtracking      ⬜
+14. Graphs            ⬜
+15. Dynamic Programming ⬜
+
+
+
+Currently our Goal: ↓↓↓↓↓↓↓
+
+Traversal Completed (Level 1,2,3) ✅
+      ↓
+HashMap Level 3 & Finish remaining important problems
+      ↓
+Two Pointers ⭐⭐⭐⭐⭐
+      ↓
+Sliding Window ⭐⭐⭐⭐⭐
+      ↓
+Prefix Sum ⭐⭐⭐⭐
+      ↓
+Binary Search ⭐⭐⭐⭐⭐
+      ↓
+Stack ⭐⭐⭐⭐
+      ↓
+Linked List ⭐⭐⭐⭐
