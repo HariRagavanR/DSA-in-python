@@ -1,0 +1,19 @@
+🟢 LEVEL 1 — Basic Two Pointers
+1. Reverse an Array
+Pattern:
+Left + Right
+2. Reverse a String
+Pattern:
+Left + Right
+3. Check Palindrome
+Pattern:
+Left ↔ Right comparison
+4. Check Palindrome String
+Pattern:
+Opposite Pointers
+5. Pair Sum in Sorted Array
+Pattern:
+Left + Right
+6. Merge Two Sorted Arrays — Basic
+Pattern:
+Two pointers

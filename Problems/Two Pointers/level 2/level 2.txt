@@ -1,0 +1,19 @@
+🟡 LEVEL 2 — Core Interview Problems
+1. Two Sum II — Input Array Is Sorted ⭐⭐⭐⭐⭐
+Pattern:
+Opposite Two Pointers
+2. Remove Duplicates from Sorted Array ⭐⭐⭐⭐⭐
+Pattern:
+Slow + Fast Pointer
+3. Move Zeroes ⭐⭐⭐⭐⭐
+Pattern:
+Slow + Fast Pointer
+4. Remove Element
+Pattern:
+Slow + Fast
+5. Squares of a Sorted Array
+Pattern:
+Left + Right
+6. Merge Sorted Arrays
+Pattern:
+Two Pointer Merge

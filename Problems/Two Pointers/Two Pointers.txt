@@ -1,0 +1,738 @@
+
+# 📘 CHAPTER 2 — TWO POINTERS
+
+## 🧭 First: Two Pointers na enna?
+
+Simple-ah sonna:
+
+> **Oru array/string-la rendu positions-ai simultaneously maintain panni, avanga movement-ai control panni problem solve panradhu dhaan Two Pointers.**
+
+Usually:
+
+```text id="9g8g4q"
+left  →                ←  right
+
+[ 1 ][ 2 ][ 3 ][ 4 ][ 5 ][ 6 ]
+  ↑                         ↑
+ left                      right
+```
+
+Rendu pointers:
+
+```text id="m2i6o5"
+left
+right
+```
+
+Condition based on:
+
+```text id="9d8h4m"
+left → move
+right → move
+both → move
+```
+
+---
+
+# 🤔 Why Two Pointers?
+
+Suppose:
+
+```text id="w8z1c6"
+nums = [1,2,3,4,5]
+```
+
+Question:
+
+> Find two numbers whose sum is `6`.
+
+Brute force:
+
+```text id="uwj7z1"
+1 + 2
+1 + 3
+1 + 4
+1 + 5
+2 + 3
+...
+```
+
+Many unnecessary comparisons.
+
+If array is **sorted**, we can do:
+
+```text id="xk6z8p"
+[1, 2, 3, 4, 5]
+ ↑           ↑
+left        right
+```
+
+Calculate:
+
+```text id="7qv9t4"
+1 + 5 = 6
+```
+
+Found! 🎯
+
+Only two pointers needed.
+
+---
+
+# 🧠 Core Two Pointer Logic
+
+For sorted array:
+
+```text id="u6y1m8"
+left = 0
+right = len(nums) - 1
+```
+
+Then:
+
+```text id="x3x8m9"
+sum < target
+    ↓
+left += 1
+
+sum > target
+    ↓
+right -= 1
+
+sum == target
+    ↓
+Answer
+```
+
+Why?
+
+Because array sorted.
+
+Example:
+
+```text id="4y7n5w"
+[1,2,3,4,5]
+ ↑       ↑
+1       5
+
+1 + 5 = 6
+```
+
+If:
+
+```text id="v3z2kb"
+1 + 5 = 7
+```
+
+Too big.
+
+`right` move:
+
+```text id="3b8d6v"
+[1,2,3,4,5]
+ ↑     ↑
+left  right
+
+1 + 4 = 5
+```
+
+Too small.
+
+`left` move:
+
+```text id="d4u7hs"
+[1,2,3,4,5]
+   ↑   ↑
+ left right
+
+2 + 4 = 6
+```
+
+Found.
+
+---
+
+# 🎯 Two Pointers — Major Types
+
+Namma chapter-la mainly **4 patterns** learn pannuvom.
+
+## 1️⃣ Opposite Direction
+
+```text id="k9s5xe"
+left  →        ← right
+```
+
+Pointers start from opposite ends.
+
+Common for:
+
+```text id="6q1hmc"
+Sorted Pair Sum
+Palindrome
+Container Problems
+Reverse / Compare
+```
+
+---
+
+## 2️⃣ Same Direction
+
+Both pointers move forward:
+
+```text id="s3v4fr"
+left →
+right →
+```
+
+Usually:
+
+```text id="f1n4r5"
+left = window start
+right = scanning pointer
+```
+
+Examples:
+
+```text id="y9b7z1"
+Remove Duplicates
+Move Zeroes
+Partitioning
+```
+
+---
+
+## 3️⃣ Fast & Slow Pointer
+
+One pointer moves faster:
+
+```text id="3g4f8k"
+slow → 
+fast → →
+```
+
+Mostly Linked List-la famous.
+
+But arrays-la too:
+
+```text id="f3d7a9"
+Cycle Detection
+Duplicate Number
+```
+
+---
+
+## 4️⃣ Multiple Pointers / 3 Pointers
+
+Example:
+
+```text id="q2j8m4"
+left
+mid
+right
+```
+
+Useful for:
+
+```text id="7s1p9c"
+3Sum
+Dutch National Flag
+Partitioning
+```
+
+---
+
+# 📚 TWO POINTERS — LEVEL-WISE QUESTIONS
+
+Namma **quantity-la pogama**, pattern coverage-ku select pannuvom.
+
+---
+
+# 🟢 LEVEL 1 — Basic Two Pointers
+
+### 1. Reverse an Array
+
+```text id="4g7k2m"
+Pattern:
+Left + Right
+```
+
+### 2. Reverse a String
+
+```text id="m2k8v1"
+Pattern:
+Left + Right
+```
+
+### 3. Check Palindrome
+
+```text id="n8p4x6"
+Pattern:
+Left ↔ Right comparison
+```
+
+### 4. Check Palindrome String
+
+```text id="c5r7t2"
+Pattern:
+Opposite Pointers
+```
+
+### 5. Pair Sum in Sorted Array
+
+```text id="w3d6q9"
+Pattern:
+Left + Right
+```
+
+### 6. Merge Two Sorted Arrays — Basic
+
+```text id="j7s2k5"
+Pattern:
+Two pointers
+```
+
+---
+
+# 🟡 LEVEL 2 — Core Interview Problems
+
+### 1. Two Sum II — Input Array Is Sorted ⭐⭐⭐⭐⭐
+
+```text id="9v3k1p"
+Pattern:
+Opposite Two Pointers
+```
+
+### 2. Remove Duplicates from Sorted Array ⭐⭐⭐⭐⭐
+
+```text id="h4m8q2"
+Pattern:
+Slow + Fast Pointer
+```
+
+### 3. Move Zeroes ⭐⭐⭐⭐⭐
+
+```text id="b7x2n5"
+Pattern:
+Slow + Fast Pointer
+```
+
+### 4. Remove Element
+
+```text id="k3d9w6"
+Pattern:
+Slow + Fast
+```
+
+### 5. Squares of a Sorted Array
+
+```text id="p6y1r8"
+Pattern:
+Left + Right
+```
+
+### 6. Merge Sorted Arrays
+
+```text id="s8f4c2"
+Pattern:
+Two Pointer Merge
+```
+
+---
+
+# 🟠 LEVEL 3 — Pattern Combination
+
+### 1. Container With Most Water ⭐⭐⭐⭐⭐
+
+```text id="u4k7m1"
+Pattern:
+Two Pointers
++
+Greedy Movement
+```
+
+### 2. 3Sum ⭐⭐⭐⭐⭐
+
+```text id="n5r2x8"
+Pattern:
+Sorting
++
+Two Pointers
+```
+
+### 3. Sort Colors ⭐⭐⭐⭐⭐
+
+```text id="q8d3v6"
+Pattern:
+Three Pointers
+```
+
+### 4. Valid Palindrome II
+
+```text id="m1s7p4"
+Pattern:
+Two Pointers
++
+Conditional Skip
+```
+
+### 5. Backspace String Compare
+
+```text id="c6y2k9"
+Pattern:
+Two Pointers
++
+Reverse Traversal
+```
+
+### 6. Boats to Save People
+
+```text id="z3h8n5"
+Pattern:
+Sorting
++
+Two Pointers
+```
+
+---
+
+# 🔴 MEDIUM / INTERVIEW LEVEL
+
+These are the ones we'll use to **master the pattern** rather than solve 50 random problems.
+
+```text id="q5r9x2"
+1. 3Sum
+2. 4Sum
+3. Container With Most Water
+4. Trapping Rain Water
+5. 3Sum Closest
+6. Sort Colors
+7. Boats to Save People
+8. Remove Duplicates II
+9. Partition Array
+10. Minimum Size Subarray-related pointer variations
+```
+
+Some of these overlap with:
+
+```text id="h7m2p9"
+Greedy
+Sliding Window
+Prefix Sum
+```
+
+That's intentional.
+
+---
+
+# 🎯 What We Actually Need to Master
+
+Don't memorize 20 solutions.
+
+We need to master these **4 templates**:
+
+```text id="v8k3q1"
+1️⃣ Left ↔ Right
+
+2️⃣ Slow → Fast
+
+3️⃣ Sort + Two Pointers
+
+4️⃣ Three Pointers
+```
+
+---
+
+# 🧠 TEMPLATE 1 — Opposite Pointers
+
+```python
+left = 0
+right = len(arr) - 1
+
+while left < right:
+
+    # process arr[left], arr[right]
+
+    if condition:
+        left += 1
+
+    else:
+        right -= 1
+```
+
+Used for:
+
+```text
+Palindrome
+Two Sum II
+Container With Most Water
+```
+
+---
+
+# 🧠 TEMPLATE 2 — Slow + Fast
+
+```python
+slow = 0
+
+for fast in range(len(arr)):
+
+    if condition:
+
+        arr[slow] = arr[fast]
+        slow += 1
+```
+
+Used for:
+
+```text
+Remove Duplicates
+Move Zeroes
+Remove Element
+```
+
+---
+
+# 🧠 TEMPLATE 3 — Sort + Two Pointers
+
+```python
+nums.sort()
+
+for i in range(len(nums)):
+
+    left = i + 1
+    right = len(nums) - 1
+
+    while left < right:
+
+        total = nums[i] + nums[left] + nums[right]
+
+        if total == target:
+            # found
+
+        elif total < target:
+            left += 1
+
+        else:
+            right -= 1
+```
+
+🔥 This becomes the foundation for **3Sum**.
+
+---
+
+# 🧠 TEMPLATE 4 — Three Pointers
+
+Usually:
+
+```text
+left
+mid
+right
+```
+
+Example:
+
+```text
+[0, 2, 1, 2, 0]
+ ↑        ↑
+left     right
+    ↑
+   mid
+```
+
+Used heavily in:
+
+```text
+Sort Colors
+Partitioning
+```
+
+---
+
+# 🔍 How Do I Recognize Two Pointers?
+
+Question paatha indha clues paaru:
+
+```text id="x7v3m2"
+Sorted Array
++
+Pair
+```
+
+👉 Two Pointers
+
+---
+
+```text id="a9k5d1"
+Palindrome
+```
+
+👉 Left + Right
+
+---
+
+```text id="m4q8z6"
+Remove duplicates
++
+Sorted
+```
+
+👉 Slow + Fast
+
+---
+
+```text id="c2w7p3"
+Move elements
++
+Maintain order
+```
+
+👉 Slow + Fast
+
+---
+
+```text id="r8n1h5"
+3 numbers
++
+Target
+```
+
+👉 Sort + Two Pointers
+
+---
+
+```text id="v6b3k9"
+Partition into categories
+```
+
+👉 Multiple Pointers
+
+---
+
+# ⚠️ One Important Difference
+
+**Two Pointers ≠ Sliding Window.**
+
+They sometimes look similar because both use:
+
+```text
+left
+right
+```
+
+But their purpose differs.
+
+### Two Pointers
+
+Usually:
+
+```text id="p8q2m5"
+left/right positions
+        ↓
+Compare / choose / partition
+```
+
+### Sliding Window
+
+```text id="k4x7n1"
+left/right
+    ↓
+Maintain a continuous window
+    ↓
+Condition
+    ↓
+Expand / Shrink
+```
+
+For example:
+
+```text
+Palindrome
+→ Two Pointers
+```
+
+but:
+
+```text
+Longest substring without duplicate
+→ Sliding Window
+```
+
+🔥 **Pointers same. Purpose different.**
+
+---
+
+# 📒 Notebook Summary
+
+```text
+TWO POINTERS
+
+Definition:
+
+Use two indices/pointers to traverse
+an array/string efficiently instead of
+checking every possible combination.
+
+Main Types:
+
+1. Left ↔ Right
+2. Slow → Fast
+3. Sort + Two Pointers
+4. Three Pointers
+
+Core Templates:
+
+Opposite:
+
+left = 0
+right = len(arr) - 1
+
+while left < right:
+    ...
+    left += 1
+    right -= 1
+
+
+Slow/Fast:
+
+slow = 0
+
+for fast in range(len(arr)):
+    if condition:
+        arr[slow] = arr[fast]
+        slow += 1
+
+
+Recognition:
+
+Sorted + Pair
+→ Two Pointers
+
+Palindrome
+→ Left + Right
+
+Remove / Move / Compress
+→ Slow + Fast
+
+3 numbers + Target
+→ Sort + Two Pointers
+
+Partition
+→ Multiple Pointers
+```
+
+### 🔥 Our learning order
+
+```text
+Two Pointers
+     ↓
+Level 1 — Understand movement
+     ↓
+Level 2 — Core templates
+     ↓
+Level 3 — Combination
+     ↓
+Medium — Interview variations
+```
+
+**First problem namma Level 1-la `Reverse Array` eduthu, `left` and `right` actually eppadi work aagudhu-nu crystal clear-ah build pannuvom. Adhukku apram Palindrome → Pair Sum → Slow/Fast pattern-ku move pannuvom.**

@@ -1,0 +1,19 @@
+🟠 LEVEL 3 — Pattern Combination
+1. Container With Most Water ⭐⭐⭐⭐⭐
+Pattern:
+Two Pointers
++
+Greedy Movement
+2. 3Sum ⭐⭐⭐⭐⭐
+Pattern:
+Sorting
++
+Two Pointers
+3. Sort Colors ⭐⭐⭐⭐⭐
+Pattern:
+Three Pointers
+4. Valid Palindrome II
+Pattern:
+Two Pointers
++
+Conditional Skip

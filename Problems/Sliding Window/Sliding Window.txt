@@ -1,0 +1,31 @@
+LEVEL 1 — Foundation
+1. Maximum Sum Subarray of Size K
+   → Fixed Window
+
+2. Average of Subarray of Size K
+   → Fixed Window
+
+3. Maximum Number of Vowels in a Substring of Size K
+   → Fixed Window
+
+   
+LEVEL 2 — Core Interview ⭐⭐⭐⭐⭐
+4. Longest Substring Without Repeating Characters
+   → Variable Window + HashMap
+
+5. Longest Subarray with Sum ≤ K
+   → Variable Window
+
+6. Minimum Size Subarray Sum
+   → Expand + Shrink
+
+
+LEVEL 3 — Important Variations
+7. Longest Repeating Character Replacement
+   → Window + Frequency Map
+
+8. Permutation in String
+   → Fixed Window + Frequency
+
+9. Minimum Window Substring
+   → Variable Window + HashMap 

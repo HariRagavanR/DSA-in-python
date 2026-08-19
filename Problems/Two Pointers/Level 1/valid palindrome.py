@@ -1,0 +1,27 @@
+s = "A man, a plan, a canal: Panama"
+# s = "race a car"
+
+def is_valid_palindrome(s):
+
+    left = 0
+    right = len(s) -1
+
+    while left < right:
+
+        if not s[left].isalnum():
+            left += 1
+
+        elif not s[right].isalnum():
+            right -= 1
+
+        elif s[left].lower() != s[right].lower():
+            return False
+
+        else:
+            left +=1
+            right -=1
+
+    return True
+
+print(is_valid_palindrome(s))
+
