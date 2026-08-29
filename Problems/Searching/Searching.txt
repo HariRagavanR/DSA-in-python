@@ -1,0 +1,19 @@
+🔎 SEARCHING
+
+LEVEL 1 — FOUNDATION
+│
+├── 1. Linear Search
+└── 2. Basic Binary Search ⭐⭐⭐⭐⭐
+        ↓
+LEVEL 2 — CORE VARIATIONS
+│
+├── 3. First Occurrence
+├── 4. Last Occurrence
+├── 5. Lower Bound
+└── 6. Upper Bound
+        ↓
+LEVEL 3 — INTERVIEW PATTERNS
+│
+├── 7. Search in Rotated Sorted Array
+├── 8. Binary Search on Answer ⭐⭐⭐⭐⭐
+└── 9. Monotonic Search Problems
