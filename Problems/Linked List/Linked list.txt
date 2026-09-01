@@ -1,0 +1,20 @@
+LEVEL 1 — FOUNDATION
+├── What is Linked List?
+├── Node
+├── Head / Tail
+├── Traversal
+├── Insert
+└── Delete
+
+LEVEL 2 — CORE
+├── Reverse Linked List
+├── Find Middle
+├── Fast & Slow Pointers
+├── Detect Cycle
+└── Merge Two Sorted Lists
+
+LEVEL 3 — INTERVIEW
+├── Remove Nth Node
+├── Intersection
+├── Palindrome Linked List
+└── Important variations
